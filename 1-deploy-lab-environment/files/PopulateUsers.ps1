@@ -3,12 +3,12 @@ Import-Module ActiveDirectory
 
 #Create some OUs for Users and Computers
 $domain = Get-ADDomain
-New-ADOrganizationalUnit -Name "Contoso Users" -Path $domain.DistinguishedName
-New-ADOrganizationalUnit -Name "Contoso Computers" -Path $domain.DistinguishedName
-New-ADOrganizationalUnit -Name "Contoso Groups" -Path $domain.DistinguishedName
+New-ADOrganizationalUnit -Name "Nintendo Users" -Path $domain.DistinguishedName
+New-ADOrganizationalUnit -Name "Nintendo Computers" -Path $domain.DistinguishedName
+New-ADOrganizationalUnit -Name "Nintendo Groups" -Path $domain.DistinguishedName
 
 $Password = ConvertTo-SecureString "agxsFX72xwsSAi" -AsPlainText -Force
-$OU = Get-ADOrganizationalUnit -Identity "OU=Contoso Users,$($domain.DistinguishedName)"
+$OU = Get-ADOrganizationalUnit -Identity "OU=Nintendo Users,$($domain.DistinguishedName)"
 
 $users = Import-Csv -Path .\Fake_User_data.csv
 foreach($item in $users){
@@ -16,7 +16,7 @@ foreach($item in $users){
         City = $item.City
         Country = $item.Country
         Department = $item.Department
-        Company = "Contoso"
+        Company = "Nintendo"
         DisplayName = "$($item.GivenName) $($item.Surname)"
         Name = "$($item.GivenName) $($item.Surname)"
         GivenName = $item.GivenName

@@ -22,7 +22,7 @@ variable "dc_private_ip_address" {
 variable "dc_virtual_machine_size" {
   description = "(Optional) Virtual Machine size of DC. Defaults to Standard_D2s_v5"
   type        = string
-  default     = "Standard_D2s_v5"
+  default     = "Standard_B2s"
 }
 
 variable "dc_admin_username" {
