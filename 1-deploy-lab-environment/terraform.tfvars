@@ -5,5 +5,5 @@ vnet_hub_subnets = {
   AzureFirewallSubnet = "10.0.0.0/26"
 }
 dc_private_ip_address = "10.0.1.4"
-dc_ad_domain_name     = "contosohq.xyz"
-dc_ad_netbios_name    = "CONTOSOHQ"
+dc_ad_domain_name     = "mariojruiz.com"
+dc_ad_netbios_name    = "MJRUIZHQ"
