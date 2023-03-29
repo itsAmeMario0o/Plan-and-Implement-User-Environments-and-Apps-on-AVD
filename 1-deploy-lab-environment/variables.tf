@@ -1,7 +1,7 @@
 variable "azure_region" {
   description = "(Optional) Region in which to deploy the hub network and DC. Defaults to West US."
   type        = string
-  default     = "westus"
+  default     = "eastus"
 }
 
 variable "vnet_hub_address_space" {
